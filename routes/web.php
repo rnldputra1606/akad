@@ -17,8 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('register','Auth\RegisterController@getRegister');
-Route::get('kelurahan/get/{id}','Auth\RegisterController@getKelurahan');
+// Route::get('kelurahan2/get/{id}','Auth\RegisterController@getKelurahan2');
 
 Route::get('/registerKades', 'adminController@index');
 Route::get('kelurahan/get/{id}', 'adminController@getKelurahan');

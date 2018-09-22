@@ -82,16 +82,16 @@ class RegisterController extends Controller
         ]);
     }
 
-    public function getRegister()
-{
-    $kecamatan=kecamatan::all();
-    return view('auth.register',compact('kecamatan'));
-}
+    public function index()
 
+      {
+          $kecamatan = kecamatan::all();
+          return view('auth/register',compact('kecamatan'));
+      }
 
-
-public function getKelurahan($id) {
-   $kelurahan = kelurahan::where("kecamatan",$id)->pluck("kelurahan","idKelurahan");
-   return json_encode($kelurahan);
-}
+       public function getKelurahan($id) {
+          $kelurahan = kelurahan::where("kecamatan",$id)->pluck("kelurahan","idKelurahan");
+          dd ($kelurahan);
+          return json_encode($kelurahan);
+      }
 }

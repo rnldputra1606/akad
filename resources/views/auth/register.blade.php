@@ -116,7 +116,7 @@
         </div>
     </div>
 </div>
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('assets/js/app.js') }}"></script>
 <script type="text/javascript">
 $(document).ready(function() {
 
